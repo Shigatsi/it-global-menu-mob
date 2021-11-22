@@ -12,6 +12,7 @@
   margin: 0 auto;
   font-family: 'Roboto', Arial, sans-serif;
   position: relative;
+  min-width: 320px;
 }
 
 body {

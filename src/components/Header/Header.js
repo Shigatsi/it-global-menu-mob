@@ -1,5 +1,4 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
 
 import logoItGlobal from "../../images/Logo_ITG.svg";
 import iconCross from "../../images/Vector 33_(Stroke).svg";
@@ -14,14 +13,9 @@ function Header() {
         <button className="menu__button" type="button">
           <img className="menu__icon-menu" src={menuIcon} alt="иконка меню" />
         </button>
-        <ul className="menu__list">
-          <li className="menu__item">
-            {}
-            <Link to="#" className="menu__link">
-              Главная
-            </Link>
-          </li>
-        </ul>
+        {/* <ul className="menu__list">
+          <li className="menu__item"></li>
+        </ul> */}
       </nav>
     </header>
   );
