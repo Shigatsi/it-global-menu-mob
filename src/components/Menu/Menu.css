@@ -30,3 +30,25 @@
   height: 100vh;
   justify-content: space-between;
 }
+
+.navigation-menu__list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+
+}
+
+.navigation-menu__item {
+
+}
+
+.navigation-menu__item-link{
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  display: flex;
+  justify-content: space-between;
+}
