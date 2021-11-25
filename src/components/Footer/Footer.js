@@ -26,10 +26,7 @@ function Footer() {
           </p>
           <ul className="footer__nav">
             <li className="foter__list-item">
-              <a
-                href="https://https://itglobal.com/ru-ru/"
-                className="footer__link"
-              >
+              <a href="https://https://itglobal.com/" className="footer__link">
                 ITGLOBAL.COM
               </a>
             </li>

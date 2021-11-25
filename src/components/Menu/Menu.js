@@ -16,6 +16,17 @@ function Menu() {
     setNavigation(!navigation);
   };
 
+  const [selectedMenuItem, setselectedMenuItem] = React.useState("");
+  function handlelMenuItemClick(item) {
+    setselectedMenuItem(item);
+    console.log(selectedMenuItem);
+  }
+  const [navItem, setNavItem] = React.useState(true);
+
+  const onItemClick = () => {
+    setNavItem(!navItem);
+  };
+
   return (
     <>
       <button className="menu__button" type="button">
@@ -46,9 +57,32 @@ function Menu() {
               />
             </Link>
           </div>
-          <ul className="navigation-menu__list">
+          <ul className="navigation-menu__list navigation-menu__list_type_expanded">
             {menu.map((item, i) => (
-              <NavItem id={i} item={item.item} />
+              // <NavItem id={i} item={item.item} />
+              <li
+                className={
+                  navItem
+                    ? "navigation-menu__item navigation-menu__item_type_active"
+                    : "navigation-menu__item"
+                }
+              >
+                <Link
+                  onClick={(_) => handlelMenuItemClick(item.item)}
+                  className="navigation-menu__item-link"
+                  to="#"
+                >
+                  {item.item}
+
+                  <button className="menu__button" type="button">
+                    <img
+                      className="menu__icon-menu"
+                      src={arrowRight}
+                      alt="иконка меню"
+                    />
+                  </button>
+                </Link>
+              </li>
             ))}
           </ul>
           <div>
@@ -74,31 +108,31 @@ function Menu() {
 }
 export default Menu;
 
-function NavItem(props) {
-  const [menuItem, setMenuItem] = React.useState("");
-  const [navItem, setNavItem] = React.useState(true);
+// function NavItem(props) {
+//   const [menuItem, setMenuItem] = React.useState("");
+//   const [navItem, setNavItem] = React.useState(true);
 
-  const onItemClick = () => {
-    setMenuItem(props.item);
-    setNavItem(!navItem);
-    console.log(menuItem);
-  };
+//   const onItemClick = () => {
+//     setMenuItem(props.item);
+//     setNavItem(!navItem);
+//     console.log(menuItem);
+//   };
 
-  return (
-    <li
-      className={
-        navItem
-          ? "navigation-menu__item navigation-menu__item_type_active"
-          : "navigation-menu__item"
-      }
-    >
-      <Link onClick={onItemClick} className="navigation-menu__item-link" to="#">
-        {props.item}
+//   return (
+//     // <li
+//     //   className={
+//     //     navItem
+//     //       ? "navigation-menu__item navigation-menu__item_type_active"
+//     //       : "navigation-menu__item"
+//     //   }
+//     // >
+//     //   <Link onClick={onItemClick} className="navigation-menu__item-link" to="#">
+//     //     {props.item}
 
-        <button className="menu__button" type="button">
-          <img className="menu__icon-menu" src={arrowRight} alt="иконка меню" />
-        </button>
-      </Link>
-    </li>
-  );
-}
+//     //     <button className="menu__button" type="button">
+//     //       <img className="menu__icon-menu" src={arrowRight} alt="иконка меню" />
+//     //     </button>
+//     //   </Link>
+//     // </li>
+//   );
+// }
