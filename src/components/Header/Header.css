@@ -18,3 +18,9 @@
   cursor: pointer;
   transition: .2s ease-in-out;;
 }
+
+@media screen and (max-width: 425px) {
+  .header {
+    padding: 23px 15px 15px;
+  }
+}

@@ -4,7 +4,7 @@ import logoItGlobal from "../../images/Logo_ITG.svg";
 
 import "./Header.css";
 
-import Menu from "../Menu/Menu.js"
+import Menu from "../Menu/Menu.js";
 
 function Header() {
   return (

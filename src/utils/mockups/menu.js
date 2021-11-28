@@ -1,21 +1,19 @@
 const menuItems = [
   {
-    item: 'Services',
+    item: "Services",
   },
 
   {
-    item: 'Managed IT',
+    item: "Managed IT",
   },
 
   {
-    item: 'Telecom Solutions',
+    item: "Telecom Solutions",
   },
 
   {
-    item: 'About Us',
+    item: "About Us",
   },
-
-
-]
+];
 
 export default menuItems;
