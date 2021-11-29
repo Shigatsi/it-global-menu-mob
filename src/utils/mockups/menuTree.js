@@ -125,7 +125,16 @@ const menuTree =[
     item: 'Managed IT',
     subitems: [
       {
-        title: ""
+        title: "Управление облаками"
+      },
+      {
+        title: "Managed DevOps"
+      },
+      {
+        title: "Managed Kubernetes"
+      },
+      {
+        title: "Управление облаками"
       }
     ]
   },
@@ -138,3 +147,5 @@ const menuTree =[
     item: 'About Us',
   },
 ]
+
+export default menuTree;

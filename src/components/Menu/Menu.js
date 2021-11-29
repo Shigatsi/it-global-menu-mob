@@ -3,7 +3,7 @@ import { Route, Link } from "react-router-dom";
 
 import "./Menu.css";
 
-import menu from "../../utils/mockups/menu.js";
+import menu from "../../utils/mockups/menuTree.js";
 import iconCross from "../../images/Vector 33_(Stroke).svg";
 import menuIcon from "../../images/icon_16x16_M_Hamburger.svg";
 import arrowRight from "../../images/icon_16x16_S_Arrow-right.svg";
@@ -11,6 +11,10 @@ import arrowRight from "../../images/icon_16x16_S_Arrow-right.svg";
 import CountrySelector from "../CountrySelector/CountrySelector.js";
 
 function Menu() {
+
+  console.log(menu)
+
+
   const [navigation, setNavigation] = React.useState(false);
   const toggleNavigation = () => {
     setNavigation(!navigation);
@@ -60,7 +64,7 @@ function Menu() {
           <ul className="navigation-menu__list navigation-menu__list_type_expanded">
             {menu.map((item, i) => (
               // <NavItem id={i} item={item.item} />
-              <li
+              <li key = {i}
                 className={
                   navItem
                     ? "navigation-menu__item navigation-menu__item_type_active"
