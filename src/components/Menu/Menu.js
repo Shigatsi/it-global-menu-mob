@@ -12,9 +12,6 @@ import CountrySelector from "../CountrySelector/CountrySelector.js";
 
 function Menu() {
 
-  console.log(menu)
-
-
   const [navigation, setNavigation] = React.useState(false);
   const toggleNavigation = () => {
     setNavigation(!navigation);
@@ -27,9 +24,6 @@ function Menu() {
   }
   const [navItem, setNavItem] = React.useState(true);
 
-  const onItemClick = () => {
-    setNavItem(!navItem);
-  };
 
   return (
     <>
@@ -52,7 +46,7 @@ function Menu() {
         <div className="navigation-menu__content">
           <div className="navigation-menu__header">
             <CountrySelector />
-            <Link to="#" className="navigation__bars">
+            <Link to="#" className="navigation__close">
               <img
                 className="navigation__btn-close"
                 src={iconCross}
@@ -63,7 +57,6 @@ function Menu() {
           </div>
           <ul className="navigation-menu__list navigation-menu__list_type_expanded">
             {menu.map((item, i) => (
-              // <NavItem id={i} item={item.item} />
               <li key = {i}
                 className={
                   navItem

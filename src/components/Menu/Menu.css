@@ -18,6 +18,8 @@
   visibility: visible;
 }
 
+
+
 .navigation-menu__content {
   transition: opacity .2s, visibility .2s linear;
   display: flex;
@@ -31,12 +33,25 @@
   justify-content: space-between;
 }
 
+.navigation-menu__header {
+  padding: 10px 15px 0px 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.navigation__close:hover {
+  cursor: pointer;
+  transition: opacity .2s, visibility .2s linear;
+  opacity: 0.7;
+}
+
 .navigation-menu__list{
   display: flex;
   flex-direction: column;
   gap: 20px;
   list-style: none;
-  padding: 0;
+  padding: 0 30px 0 33px;
 
 }
 
@@ -51,4 +66,11 @@
   line-height: 32px;
   display: flex;
   justify-content: space-between;
+  color: black;
+
+}
+
+.navigation-menu__item-link:hover{
+    color: #1d7ded;
+
 }
