@@ -6,7 +6,9 @@ import tick from "../../images/icon_16x16_S_Tick.svg";
 import arrowBottom from "../../images/icon_16x16_S_Arrow-bottom.svg";
 
 function CountrySelector() {
-  const [selectedCountry, setSelectedCountry] = React.useState({});
+  const [selectedCountry, setSelectedCountry] = React.useState(
+    "" || countries[3]
+  );
   const [isListOpen, setListOpen] = React.useState(false);
 
   function toggleListOpen() {
@@ -15,12 +17,15 @@ function CountrySelector() {
 
   function handleSelectedItem(listItem) {
     setSelectedCountry(listItem);
+    setListOpen(!isListOpen);
   }
 
-  console.log(countries);
   return (
     <div className="dd-wrapper">
-      <button className="dd-header" onClick={toggleListOpen}>
+      <button
+        className={isListOpen ? "dd-header-active" : "dd-header"}
+        onClick={toggleListOpen}
+      >
         <h3 className="dd-header-title">
           <img
             className="dd-header-icon-country"
@@ -28,7 +33,11 @@ function CountrySelector() {
             alt={selectedCountry.country}
           />
           {selectedCountry.abbreviation}
-          <img src={arrowBottom} alt={"show menu"} />
+          <img
+            className="dd-header-arrow"
+            src={arrowBottom}
+            alt={"show menu"}
+          />
         </h3>
       </button>
       <div className={isListOpen ? "dd-list dd-list-open" : "dd-list"}>
@@ -36,7 +45,11 @@ function CountrySelector() {
         {countries.map((country, i) => (
           <button
             key={i}
-            className="dd-list-item"
+            className={
+              selectedCountry.country === country.country
+                ? "dd-list-item dd-list-item-selected"
+                : "dd-list-item"
+            }
             onClick={(_) => handleSelectedItem(country)}
           >
             <div>
