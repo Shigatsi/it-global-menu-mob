@@ -11,7 +11,6 @@ import arrowRight from "../../images/icon_16x16_S_Arrow-right.svg";
 import CountrySelector from "../CountrySelector/CountrySelector.js";
 
 function Menu() {
-
   const [navigation, setNavigation] = React.useState(false);
   const toggleNavigation = () => {
     setNavigation(!navigation);
@@ -23,7 +22,6 @@ function Menu() {
     console.log(selectedMenuItem);
   }
   const [navItem, setNavItem] = React.useState(true);
-
 
   return (
     <>
@@ -57,7 +55,8 @@ function Menu() {
           </div>
           <ul className="navigation-menu__list navigation-menu__list_type_expanded">
             {menu.map((item, i) => (
-              <li key = {i}
+              <li
+                key={i}
                 className={
                   navItem
                     ? "navigation-menu__item navigation-menu__item_type_active"
@@ -66,7 +65,7 @@ function Menu() {
               >
                 <Link
                   onClick={(_) => handlelMenuItemClick(item.item)}
-                  className="navigation-menu__item-link"
+                  className="navigation-menu__link"
                   to="#"
                 >
                   {item.item}
@@ -82,7 +81,7 @@ function Menu() {
               </li>
             ))}
           </ul>
-          <div>
+          <div className="navigation-menu__footer">
             <Link
               to="#"
               className="navigation-menu__link"
@@ -104,32 +103,3 @@ function Menu() {
   );
 }
 export default Menu;
-
-// function NavItem(props) {
-//   const [menuItem, setMenuItem] = React.useState("");
-//   const [navItem, setNavItem] = React.useState(true);
-
-//   const onItemClick = () => {
-//     setMenuItem(props.item);
-//     setNavItem(!navItem);
-//     console.log(menuItem);
-//   };
-
-//   return (
-//     // <li
-//     //   className={
-//     //     navItem
-//     //       ? "navigation-menu__item navigation-menu__item_type_active"
-//     //       : "navigation-menu__item"
-//     //   }
-//     // >
-//     //   <Link onClick={onItemClick} className="navigation-menu__item-link" to="#">
-//     //     {props.item}
-
-//     //     <button className="menu__button" type="button">
-//     //       <img className="menu__icon-menu" src={arrowRight} alt="иконка меню" />
-//     //     </button>
-//     //   </Link>
-//     // </li>
-//   );
-// }

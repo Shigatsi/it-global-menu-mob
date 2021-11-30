@@ -59,7 +59,7 @@
 
 }
 
-.navigation-menu__item-link{
+.navigation-menu__link{
   text-decoration: none;
   font-weight: 500;
   font-size: 22px;
@@ -70,7 +70,14 @@
 
 }
 
-.navigation-menu__item-link:hover{
+.navigation-menu__link:hover{
     color: #1d7ded;
 
 }
+
+.navigation-menu__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 38px 30px 30px;
+ }

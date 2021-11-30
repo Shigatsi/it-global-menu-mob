@@ -1,0 +1,63 @@
+
+.dd-header {
+  border: none;
+  background-color: transparent;
+}
+
+.dd-header-title {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  margin:0;
+}
+
+.dd-header-icon-country {
+  width: 18px;
+  height: 18px;
+  padding-right: 11px;
+}
+
+.dd-list {
+  display: flex;
+  flex-direction: column;
+  width:180px;
+  background-color:transparent;
+  align-items:center;
+  box-shadow: 0px 6px 10px rgba(116, 137, 155, 0.06), 0px 1px 18px rgba(116, 137, 155, 0.04), 0px 3px 5px rgba(116, 137, 155, 0.08);
+  border-radius: 2px;
+}
+
+.dd-list-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  align-self: flex-start;
+  margin: 8px 16px 8px 17px;
+}
+
+.dd-list-item{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  line-height: 40px;
+  padding: 0 16px 0 17px;
+}
+
+.dd-list-item:hover {
+  background: #F1F8FE;
+  cursor:pointer;
+}
+
+.dd-list-item-icon{
+  width: 12px;
+  height: 12px;
+  padding-right: 12px;
+
+}
