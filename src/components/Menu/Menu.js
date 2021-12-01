@@ -53,33 +53,39 @@ function Menu() {
               />
             </Link>
           </div>
-          <ul className="navigation-menu__list navigation-menu__list_type_expanded">
-            {menu.map((item, i) => (
-              <li
-                key={i}
-                className={
-                  navItem
-                    ? "navigation-menu__item navigation-menu__item_type_active"
-                    : "navigation-menu__item"
-                }
-              >
-                <Link
-                  onClick={(_) => handlelMenuItemClick(item.item)}
-                  className="navigation-menu__link"
-                  to="#"
-                >
-                  {item.item}
+          <ul
+            className={
+              selectedMenuItem
+                ? "navigation-menu__list_type_expanded"
+                : "navigation-menu__list"
+            }
+          >
+            {selectedMenuItem
+              ? console.log(selectedMenuItem)
+              : console.log(selectedMenuItem)}
+            {selectedMenuItem ? (
+              <div>does it work</div>
+            ) : (
+              menu.map((item, i) => (
+                <li key={i}>
+                  <Link
+                    onClick={(_) => handlelMenuItemClick(item.item)}
+                    className="navigation-menu__link"
+                    to="#"
+                  >
+                    {item.item}
 
-                  <button className="menu__button" type="button">
-                    <img
-                      className="menu__icon-menu"
-                      src={arrowRight}
-                      alt="иконка меню"
-                    />
-                  </button>
-                </Link>
-              </li>
-            ))}
+                    <button className="menu__button" type="button">
+                      <img
+                        className="menu__icon-menu"
+                        src={arrowRight}
+                        alt="иконка меню"
+                      />
+                    </button>
+                  </Link>
+                </li>
+              ))
+            )}
           </ul>
           <div className="navigation-menu__footer">
             <Link
