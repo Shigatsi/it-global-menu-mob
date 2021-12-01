@@ -2,12 +2,22 @@
 .dd-header {
   border: none;
   background-color: transparent;
+  padding: 0;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+.dd-header:focus,  .dd-header-active:focus{
+  outline: none;
 }
 
 .dd-header-active {
   background: rgba(29, 125, 237, 0.1);
   border: 2px solid rgba(131, 188, 255, 0.5);
   border-radius: 6px;
+  display: inline-block;
+  padding: 0;
+
 }
 
 .dd-header-title {
@@ -33,6 +43,7 @@
   height: 18px;
   padding-right: 11px;
 }
+
 
 .dd-list {
 
