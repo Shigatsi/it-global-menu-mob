@@ -1,0 +1,42 @@
+.menu-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  padding: 77px 30px 0 33px;
+
+}
+
+
+
+.menu-list__link{
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 32px;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+
+}
+
+.menu-list__link:hover{
+  color: #1d7ded;
+
+}
+
+.menu-list__link_type_header {
+
+}
+
+.menu-list__button {
+  border: none;
+  background-color: transparent;
+  fill: #fff;
+}
+
+.menu-list__button:hover {
+  opacity: .6;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}

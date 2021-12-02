@@ -18,8 +18,6 @@
   visibility: visible;
 }
 
-
-
 .navigation-menu__content {
   transition: opacity .2s, visibility .2s linear;
   display: flex;
@@ -47,35 +45,6 @@
   cursor: pointer;
   transition: opacity .2s, visibility .2s linear;
   opacity: 0.7;
-}
-
-.navigation-menu__list{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  list-style: none;
-  padding: 77px 30px 0 33px;
-
-}
-
-.navigation-menu__item {
-
-}
-
-.navigation-menu__link{
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 32px;
-  display: flex;
-  justify-content: space-between;
-  color: black;
-
-}
-
-.navigation-menu__link:hover{
-    color: #1d7ded;
-
 }
 
 .navigation-menu__footer {
