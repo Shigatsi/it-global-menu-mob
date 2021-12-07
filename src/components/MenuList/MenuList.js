@@ -96,7 +96,7 @@ export default MenuList;
 //   ));
 // }
 
-function MenuItemLevelZero({ element, settMenuListState }) {
+function MenuItemLevelZero(element, settMenuListState) {
   console.log("MenuItemLevelZero", element);
   return (
     <li>
