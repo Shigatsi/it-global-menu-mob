@@ -4,7 +4,7 @@ const menuTree = [
     subitems: [
       {
         title: "Облачные вычисления",
-        susubitems: [
+        subitems: [
           {
             title: "Cloud consulting",
             about:
@@ -39,7 +39,7 @@ const menuTree = [
       },
       {
         title: "Выделенные серверы",
-        susubitems: [
+        subitems: [
           {
             title: "Cloud consulting",
             about:
@@ -74,7 +74,7 @@ const menuTree = [
       },
       {
         title: "Платформенные сервисы",
-        susubitems: [
+        subitems: [
           {
             title: "Cloud consulting",
             about:
@@ -109,7 +109,7 @@ const menuTree = [
       },
       {
         title: "Информационная безопасность",
-        susubitems: [
+        subitems: [
           {
             title: "Cloud consulting",
             about:

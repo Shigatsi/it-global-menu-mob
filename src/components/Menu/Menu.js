@@ -11,19 +11,19 @@ import MenuList from "../MenuList/MenuList.js";
 
 function Menu() {
   const [navigation, setNavigation] = React.useState(false);
-  const [selectedMenuItem, setselectedMenuItem] = React.useState("");
+  // const [selectedMenuItem, setselectedMenuItem] = React.useState(" ");
 
   const toggleNavigation = () => {
     setNavigation(!navigation);
   };
 
-  function handlelMenuItemClick(item) {
-    setselectedMenuItem(item);
-  }
+  // function handlelMenuItemClick(item) {
+  //   setselectedMenuItem(item);
+  // }
 
-  function outExpandedMenu() {
-    setselectedMenuItem("");
-  }
+  // function outExpandedMenu() {
+  //   setselectedMenuItem(" ");
+  // }
 
   return (
     <>
@@ -56,11 +56,7 @@ function Menu() {
             </Link>
           </div>
 
-          <MenuList
-            selectedMenuItem={selectedMenuItem}
-            onMenuItemClick={handlelMenuItemClick}
-            onExpandedMenuClick={outExpandedMenu}
-          />
+          <MenuList />
           <div className="navigation-menu__footer">
             <Link
               to="#"
