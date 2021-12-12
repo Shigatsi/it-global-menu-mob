@@ -30,31 +30,83 @@ import arrowLeft from "../../images/icon_16x16_S_Arrow-left.svg";
 
 // }
 
-class MenuList extends React.Component {
-  state = {
-    currentLevel: 0,
-    currentTree: menuTree,
-  };
+// class MenuList extends React.Component {
+//   constructor (props) {
+//     super (props);
+//     this.state = {
+//       currentLevel: 0,
+//       currentTree: menuTree,
 
-  componentDidMount() {
-    this.setState({ currentTree: this.props.menuTree });
+//     };
+//   }
+
+//   componentDidMount() {
+//     this.setState({ currentTree: this.menuTree });
+
+//   }
+
+//   setCurrentTreeAndLevel(currentTree, currentLevel) {
+//     this.setState({
+//       currentLevel,
+//       currentTree,
+//     });
+
+//   console.log('MenuList, currentTree ', currentTree )
+//   }
+
+
+//   render() {
+//     const { currentLevel, currentTree } = this.state;
+//     console.log('this', this, 'this', this.state)
+//     const setMenuListState = this.setCurrentTreeAndLevel.bind(this);
+
+//     if (currentLevel === 0) {
+//       console.log('MenuList, currentTree ', currentTree );
+//       return (
+//         <>
+//           <Link to="#" className="menu-list__link menu-list__link_type_header">
+//             <button className="menu-list__button" type="button">
+//               <img
+//                 className="menu-list__icon"
+//                 src={arrowLeft}
+//                 alt="иконка меню"
+//               />
+//             </button>
+//           </Link>
+//           <ul className="menu-list">
+//             {currentTree.map((element) =>
+//               MenuItemLevelZero(element, setMenuListState)
+//             )}
+//           </ul>
+//         </>
+//       );
+//     }
+//   }
+// }
+
+// export default MenuList;
+
+function MenuList () {
+  const [currentLevel, setCurrentLevel] = React.useState(0);
+  const [currentTree, setCurrentTree] =React.useState(menuTree);
+
+  React.useEffect(()=>{
+    setCurrentTree(menuTree);
+    console.log('work useEffect?');
+  },[menuTree]);
+
+  function setCurrentTreeAndLevel(currentTree, currentLevel) {
+    setCurrentTree(currentTree);
+    setCurrentLevel(currentLevel);
   }
 
-  setCurrentTreeAndLevel(currentTree, currentLevel) {
-    this.setState({
-      currentLevel,
-      currentTree,
-    });
-  }
+  console.log(currentTree, currentLevel)
+  return(
+    <>
 
-  render() {
-    const { currentLevel, currentTree } = this.state;
-    const setMenuListState = this.setCurrentTreeAndLevel.bind(this);
+      (currentLevel == 0) ? (
 
-    if (currentLevel === 0) {
-      console.log();
-      return (
-        <>
+      <>
           <Link to="#" className="menu-list__link menu-list__link_type_header">
             <button className="menu-list__button" type="button">
               <img
@@ -66,13 +118,15 @@ class MenuList extends React.Component {
           </Link>
           <ul className="menu-list">
             {currentTree.map((element) =>
-              MenuItemLevelZero(element, setMenuListState)
+              MenuItemLevelZero(element, setCurrentTreeAndLevel)
             )}
           </ul>
         </>
-      );
-    }
-  }
+      )
+
+    </>
+  )
+
 }
 
 export default MenuList;
