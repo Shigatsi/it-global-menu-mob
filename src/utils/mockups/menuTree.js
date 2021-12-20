@@ -1,142 +1,142 @@
 const menuTree = [
   {
     item: "Services",
-    subitems: [
+    items: [
       {
-        title: "Облачные вычисления",
-        subitems: [
+        item: "Облачные вычисления",
+        items: [
           {
-            title: "Cloud consulting",
+            item: "Cloud consulting",
             about:
               "Relational database services for MySQL, PostgreSQL, and SQL server.",
           },
           {
-            title: "Cloud infrastructure analytics",
+            item: "Cloud infrastructure analytics",
             about:
               "Health-specific solutions to enhance the patient experience.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Lorem ipsum dolor sit amet,",
+            item: "Lorem ipsum dolor sit amet,",
             about:
               "consectetur adipiscing elit. Aliquam tempor fermentum neque ultrices ornare.",
           },
         ],
       },
       {
-        title: "Выделенные серверы",
-        subitems: [
+        item: "Выделенные серверы",
+        items: [
           {
-            title: "Cloud consulting",
+            item: "Cloud consulting",
             about:
               "Relational database services for MySQL, PostgreSQL, and SQL server.",
           },
           {
-            title: "Cloud infrastructure analytics",
+            item: "Cloud infrastructure analytics",
             about:
               "Health-specific solutions to enhance the patient experience.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Lorem ipsum dolor sit amet,",
+            item: "Lorem ipsum dolor sit amet,",
             about:
               "consectetur adipiscing elit. Aliquam tempor fermentum neque ultrices ornare.",
           },
         ],
       },
       {
-        title: "Платформенные сервисы",
-        subitems: [
+        item: "Платформенные сервисы",
+        items: [
           {
-            title: "Cloud consulting",
+            item: "Cloud consulting",
             about:
               "Relational database services for MySQL, PostgreSQL, and SQL server.",
           },
           {
-            title: "Cloud infrastructure analytics",
+            item: "Cloud infrastructure analytics",
             about:
               "Health-specific solutions to enhance the patient experience.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Lorem ipsum dolor sit amet,",
+            item: "Lorem ipsum dolor sit amet,",
             about:
               "consectetur adipiscing elit. Aliquam tempor fermentum neque ultrices ornare.",
           },
         ],
       },
       {
-        title: "Информационная безопасность",
-        subitems: [
+        item: "Информационная безопасность",
+        items: [
           {
-            title: "Cloud consulting",
+            item: "Cloud consulting",
             about:
               "Relational database services for MySQL, PostgreSQL, and SQL server.",
           },
           {
-            title: "Cloud infrastructure analytics",
+            item: "Cloud infrastructure analytics",
             about:
               "Health-specific solutions to enhance the patient experience.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Hybrid Cloud",
+            item: "Hybrid Cloud",
             about:
               "Data storage, AI, and analytics solutions for government agencies.",
           },
           {
-            title: "Lorem ipsum dolor sit amet,",
+            item: "Lorem ipsum dolor sit amet,",
             about:
               "consectetur adipiscing elit. Aliquam tempor fermentum neque ultrices ornare.",
           },
@@ -147,18 +147,18 @@ const menuTree = [
 
   {
     item: "Managed IT",
-    subitems: [
+    items: [
       {
-        title: "Управление облаками",
+        item: "Управление облаками",
       },
       {
-        title: "Managed DevOps",
+        item: "Managed DevOps",
       },
       {
-        title: "Managed Kubernetes",
+        item: "Managed Kubernetes",
       },
       {
-        title: "Управление облаками",
+        item: "Управление облаками",
       },
     ],
   },

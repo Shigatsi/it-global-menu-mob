@@ -26,7 +26,12 @@
 }
 
 .menu-list__link_type_header {
-
+  padding: 100px 12px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  right: 0;
+  left: 0;
 }
 
 .menu-list__button {
