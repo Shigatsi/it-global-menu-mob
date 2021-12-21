@@ -16,26 +16,6 @@ function MenuList () {
 
   function decreaseCurrentLevel(currentLevel) {
     setCurrentLevel(currentLevel - 1);
-
-  }
-
-  function findMyParent (node, subtree, result) {
-    console.log("trun'",node, subtree, result)
-    if(result.parent) {
-      return
-    }
-    if (!subtree.item) {
-      return
-    }
-    if (subtree.items === undefined) {
-      return
-    }
-    for (let item of subtree.items) {
-      if (node === item)
-          result.parent = subtree
-      else
-      findMyParent(node, item, result)
-    }
   }
 
 
@@ -45,9 +25,8 @@ function MenuList () {
     setSelectedMenuItem(item);
   }
 
-  let result = {}
-  console.log('currentTree(28): ', menuTree, 'currentLevel: ', currentLevel)
-  console.log('result', result);
+
+  console.log('currentTree(28): ', currentTree, 'currentLevel: ', currentLevel)
 
 
   if  (currentLevel === 0) {
@@ -61,7 +40,7 @@ function MenuList () {
   } else if (currentLevel === 1) {
     return(
       <>
-        <Link to="#" className="menu-list__link menu-list__link_type_header" onClick={()=>  findMyParent(currentTree, menuTree, result)}>
+        <Link to="#" className="menu-list__link menu-list__link_type_header" onClick={()=>  console.log('click')}>
           <button className="menu-list__button" type="button">
             <img
               className="menu-list__icon"
@@ -78,10 +57,10 @@ function MenuList () {
         </ul>
       </>
     )
-  } else {
+  } else if (currentLevel === 2){
     return(
       <>
-        <Link to="#" className="menu-list__link menu-list__link_type_header" onClick={()=> decreaseCurrentLevel(currentLevel)}>
+        <Link to="#" className="menu-list__link menu-list__link_type_header" onClick={()=> console.log('click')}>
           <button className="menu-list__button" type="button">
             <img
               className="menu-list__icon"
@@ -98,6 +77,8 @@ function MenuList () {
         </ul>
       </>
     )
+  } else {
+    return
   }
 
 
